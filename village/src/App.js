@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
+import Navbar from './components/Navbar'
 import axios from 'axios'
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <Navbar />
         <SmurfForm />
         <Smurfs smurfs={this.state.smurfs} />
       </div>
