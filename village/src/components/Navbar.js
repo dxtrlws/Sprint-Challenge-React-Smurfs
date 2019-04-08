@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Typography, Button, Toolbar } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const linkStyle = {
   color: "white",
@@ -15,14 +15,14 @@ const Navbar = () => {
     <AppBar>
       <Toolbar>
         <Typography variant="h5" color="inherit">
-          <Link style={linkStyle} to="/">
+          <NavLink style={linkStyle} to="/">
             Smurfs
-          </Link>
+          </NavLink>
         </Typography>
         <Button style={btnStyle}>
-          <Link style={linkStyle} to="/smurf-form">
+          <NavLink style={linkStyle} to="/smurf-form">
             Add Smurf
-          </Link>
+          </NavLink>
         </Button>
       </Toolbar>
     </AppBar>

@@ -30,17 +30,27 @@ class App extends Component {
       });
   }
 
+  updateSmurfs = smurfs => {
+    this.setState({ smurfs: smurfs });
+  };
+
   render() {
     return (
       <div className="App">
         <Navbar />
-        <Grid container style={{ marginTop: 40 }}>
+        <Grid justify="center" container style={{ marginTop: 40 }}>
           <Route
             exact
             path="/"
-            render={props => <Smurfs {...props} smurfs={this.state.smurfs} />}
+            render={props => (
+              <Smurfs
+                {...props}
+                smurfs={this.state.smurfs}
+                updateSmurfs={this.updateSmurfs}
+              />
+            )}
           />
-          <Route path="/smurf-form" component={SmurfForm} />
+          <Route path="/smurf-form" render={props => <SmurfForm {...props} updateSmurfs={this.updateSmurfs} />} />
         </Grid>
       </div>
     );
