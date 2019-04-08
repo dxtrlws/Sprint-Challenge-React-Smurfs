@@ -50,7 +50,8 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/smurf-form" render={props => <SmurfForm {...props} updateSmurfs={this.updateSmurfs} />} />
+          <Route path="/smurf-form" exact render={props => <SmurfForm {...props} updateSmurfs={this.updateSmurfs} />} />
+          <Route path="/smurf-form/:id" exact render={props => <SmurfForm {...props} updateSmurfs={this.updateSmurfs} />} />
         </Grid>
       </div>
     );
