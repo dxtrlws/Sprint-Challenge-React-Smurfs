@@ -38,7 +38,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <Grid justify="center" container style={{ marginTop: 40 }}>
+        <Grid justify="center" container style={{ marginTop: 80 }}>
           <Route
             exact
             path="/"
